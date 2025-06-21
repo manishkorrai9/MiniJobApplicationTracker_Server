@@ -6,8 +6,8 @@ exports.createUser = (name, email, hashedPassword, callback) => {
   db.query(query, [name, email, hashedPassword], callback);
 };
 
-
-// exports.findUserByEmail = (email, callback) => {
-//   const query = "SELECT * FROM users WHERE email = ?";
-//   db.query(query, [email], callback);
-// };
+// Find user by email
+exports.findUserByEmail = (email, callback) => {
+  const query = "SELECT * FROM users WHERE email = ?";
+  db.query(query, [email], callback);
+};
